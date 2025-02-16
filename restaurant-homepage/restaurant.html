@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hell's Kitchen Menu</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff5f5;
+            color: #333;
+        }
+        .navbar {
+            background-color: #ca3803;
+            display: flex;
+            justify-content: center;
+            padding: 14px 0;
+        }
+        .navbar a {
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #ff6347;
+            color: white;
+        }
+        .container {
+            padding: 20px;
+        }
+        .menu-section {
+            margin-bottom: 20px;
+        }
+        .menu-section h2 {
+            border-bottom: 2px solid #ff4500;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #ffe4e1;
+        }
+        th, td {
+            border: 1px solid #cf714f;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #ff6347;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #ffcccb;
+        }
+        tr:hover {
+            background-color: #ff7f7f;
+        }
+        h1 {
+            color: #3f1202;
+            text-align: center;
+        }
+        p {
+            font-size: 1.1em;
+        }
+        #contact {
+            background-color: #cd6553;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+        #contact p {
+            margin: 5px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #ff6347;
+            color: white;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #home h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 3em;
+            color: #ff0000;
+        }
+        #home p {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#specialities">Specialities</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="container">
+        <section id="home">
+            <h1>Hell's Kitchen</h1>
+            <p>Welcome to our restaurant. Enjoy the best food in town!</p>
+        </section>
+
+        <section id="specialities">
+            <h1>Our Specialities</h1>
+            <p>Experience the best of Indian cuisine with our special dishes.</p>
+            <ul>
+                <li>Butter Chicken</li>
+                <li>Paneer Butter Masala</li>
+                <li>Hyderabadi Biryani</li>
+                <li>Garlic Naan</li>
+                <li>Gulab Jamun</li>
+            </ul>
+        </section>
+
+        <section id="menu">
+            <h1>Our Menu</h1>
+
+            <table>
+                <tr>
+                    <th>Category</th>
+                    <th>Item</th>
+                    <th>Price (₹)</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Starters (Veg)</td>
+                    <td>Paneer Tikka</td>
+                    <td>₹200</td>
+                </tr>
+                <tr>
+                    <td>Veg Spring Rolls</td>
+                    <td>₹160</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Starters (Non-Veg)</td>
+                    <td>Chicken Tikka</td>
+                    <td>₹240</td>
+                </tr>
+                <tr>
+                    <td>Fish Fingers</td>
+                    <td>₹300</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Biryani (Veg)</td>
+                    <td>Veg Biryani</td>
+                    <td>₹240</td>
+                </tr>
+                <tr>
+                    <td>Paneer Biryani</td>
+                    <td>₹280</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Biryani (Non-Veg)</td>
+                    <td>Chicken Biryani</td>
+                    <td>₹300</td>
+                </tr>
+                <tr>
+                    <td>Mutton Biryani</td>
+                    <td>₹360</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Breads</td>
+                    <td>Roti</td>
+                    <td>₹40</td>
+                </tr>
+                <tr>
+                    <td>Naan</td>
+                    <td>₹60</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Curries</td>
+                    <td>Butter Chicken</td>
+                    <td>₹350</td>
+                </tr>
+                <tr>
+                    <td>Paneer Butter Masala</td>
+                    <td>₹320</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <p>Email: info@hellskitchen.com</p>
+            <p>Phone: 9876543210</p>
+            <p>&copy; 2023 Hell's Kitchen. All rights reserved.</p>
+        </section>
+    </div>
+</body>
+</html>

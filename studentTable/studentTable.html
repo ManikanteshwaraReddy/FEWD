@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Example</title>
+</head>
+<body>
+    <table align="center" border="5px" cellspacing="2" cellpadding="7">
+        <thead>
+            <tr>
+                <th>SNo</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Profile</th>
+                <th>Image</th>
+                <th>Upload Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Virat Kohli</td>
+                <td>9876543210</td>
+                <td>Hyderabad</td>
+                <td><a href="#" onclick="showRowData(event, this)">Virat</a></td>
+                <td><img id="buttonImage1" src="button-image.jpg" alt="Click Me" style="max-width: 100px;"></td>
+                <td><input type="file" accept="image/*" onchange="previewImage(event, 1)"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jasprit Bumrah</td>
+                <td>9876543210</td>
+                <td>Mumbai</td>
+                <td><a href="#" onclick="showRowData(event, this)">Jasprit</a></td>
+                <td><img id="buttonImage2" src="button-image.jpg" alt="Click Me" style="max-width: 100px;"></td>
+                <td><input type="file" accept="image/*" onchange="previewImage(event, 2)"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="rdD" style="margin-top: 20px; border: 5px solid #000; padding: 10px; display: none;">
+        <h3>Row Data</h3>
+        <p id="rdC"></p>
+    </div>
+
+    <script>
+        function previewImage(event, id) {
+            var reader = new FileReader();
+            reader.onload = function() {
+                var buttonImage = document.getElementById('buttonImage' + id);
+                buttonImage.src = reader.result;
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        }
+
+        function showRowData(event, element) {
+            event.preventDefault();
+            var row = element.closest('tr');
+            var cells = row.getElementsByTagName('td');
+            var data = [];
+            for (var i = 0; i < cells.length - 3; i++) { 
+                data.push(cells[i].innerText);
+            }
+            var rdD = document.getElementById('rdD');
+            var rdC = document.getElementById('rdC');
+            rdC.innerText = data.join(', ');
+            rdD.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
