@@ -44,6 +44,8 @@
             border-collapse: collapse;
             margin-bottom: 20px;
             background-color: #ffe4e1;
+            border-radius: 10px; 
+            overflow: hidden; 
         }
         th, td {
             border: 1px solid #cf714f;
@@ -97,6 +99,26 @@
             font-family: 'Arial', sans-serif;
             font-size: 1.2em;
         }
+        .specialities-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            }
+            .speciality-item {
+            text-align: center;
+            max-width: 200px;
+            }
+            .speciality-item img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            }
+            .speciality-item p {
+            margin-top: 10px;
+            font-weight: bold;
+            }
     </style>
 </head>
 <body>
@@ -109,84 +131,108 @@
     <div class="container">
         <section id="home">
             <h1>Hell's Kitchen</h1>
-            <p>Welcome to our restaurant. Enjoy the best food in town!</p>
+            <h3>Welcome to our restaurant. Enjoy the best food in town!</h3>
         </section>
 
         <section id="specialities">
             <h1>Our Specialities</h1>
             <p>Experience the best of Indian cuisine with our special dishes.</p>
-            <ul>
-                <li>Butter Chicken</li>
-                <li>Paneer Butter Masala</li>
-                <li>Hyderabadi Biryani</li>
-                <li>Garlic Naan</li>
-                <li>Gulab Jamun</li>
-            </ul>
+            <div class="specialities-grid">
+            <div class="speciality-item">
+                <img src="images/butter-chicken.jpeg" alt="Butter Chicken">
+                <p>Butter Chicken</p>
+            </div>
+            <div class="speciality-item">
+                <img src="images/paneer-butter-masala.jpeg" alt="Paneer Butter Masala">
+                <p>Paneer Butter Masala</p>
+            </div>
+            <div class="speciality-item">
+                <img src="images/hyderabadi-biryani.jpeg" alt="Hyderabadi Biryani">
+                <p>Hyderabadi Biryani</p>
+            </div>
+            <div class="speciality-item">
+                <img src="images/garlic-naan.jpeg" alt="Garlic Naan">
+                <p>Garlic Naan</p>
+            </div>
+            <div class="speciality-item">
+                <img src="images/gulab-jamun.jpeg" alt="Gulab Jamun">
+                <p>Gulab Jamun</p>
+            </div>
+            </div>
         </section>
 
         <section id="menu">
             <h1>Our Menu</h1>
 
             <table>
-                <tr>
-                    <th>Category</th>
-                    <th>Item</th>
-                    <th>Price (₹)</th>
-                </tr>
-                <tr>
-                    <td rowspan="2">Starters (Veg)</td>
-                    <td>Paneer Tikka</td>
-                    <td>₹200</td>
-                </tr>
-                <tr>
-                    <td>Veg Spring Rolls</td>
-                    <td>₹160</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Starters (Non-Veg)</td>
-                    <td>Chicken Tikka</td>
-                    <td>₹240</td>
-                </tr>
-                <tr>
-                    <td>Fish Fingers</td>
-                    <td>₹300</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Biryani (Veg)</td>
-                    <td>Veg Biryani</td>
-                    <td>₹240</td>
-                </tr>
-                <tr>
-                    <td>Paneer Biryani</td>
-                    <td>₹280</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Biryani (Non-Veg)</td>
-                    <td>Chicken Biryani</td>
-                    <td>₹300</td>
-                </tr>
-                <tr>
-                    <td>Mutton Biryani</td>
-                    <td>₹360</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Breads</td>
-                    <td>Roti</td>
-                    <td>₹40</td>
-                </tr>
-                <tr>
-                    <td>Naan</td>
-                    <td>₹60</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Curries</td>
-                    <td>Butter Chicken</td>
-                    <td>₹350</td>
-                </tr>
-                <tr>
-                    <td>Paneer Butter Masala</td>
-                    <td>₹320</td>
-                </tr>
+            <tr>
+                <th>Category</th>
+                <th>Item</th>
+                <th>Price (₹)</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Starters (Veg)</td>
+                <td>Paneer Tikka</td>
+                <td>₹200</td>
+            </tr>
+            <tr>
+                <td>Veg Spring Rolls</td>
+                <td>₹160</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Starters (Non-Veg)</td>
+                <td>Chicken Tikka</td>
+                <td>₹240</td>
+            </tr>
+            <tr>
+                <td>Fish Fingers</td>
+                <td>₹300</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Biryani (Veg)</td>
+                <td>Veg Biryani</td>
+                <td>₹240</td>
+            </tr>
+            <tr>
+                <td>Paneer Biryani</td>
+                <td>₹280</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Biryani (Non-Veg)</td>
+                <td>Chicken Biryani</td>
+                <td>₹300</td>
+            </tr>
+            <tr>
+                <td>Mutton Biryani</td>
+                <td>₹360</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Breads</td>
+                <td>Roti</td>
+                <td>₹40</td>
+            </tr>
+            <tr>
+                <td>Naan</td>
+                <td>₹60</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Curries</td>
+                <td>Butter Chicken</td>
+                <td>₹350</td>
+            </tr>
+            <tr>
+                <td>Paneer Butter Masala</td>
+                <td>₹320</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Desserts</td>
+                <td>Gulab Jamun</td>
+                <td>₹100</td>
+            </tr>
+            <tr>
+                <td>Rasmalai</td>
+                <td>₹120</td>
+            </tr>
             </table>
         </section>
 

@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table Example</title>
+    <style>
+        body {
+            background-color: #e0f7e9;  
+        }
+        table {
+            background-color: #d4edda; 
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #155724; 
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #c3e6cb; 
+        }
+        #rdD {
+            background-color: #d4edda; 
+        }
+    </style>
 </head>
 <body>
     <table align="center" border="5px" cellspacing="2" cellpadding="7">
@@ -40,7 +62,7 @@
         </tbody>
     </table>
 
-    <div id="rdD" style="margin-top: 20px; border: 5px solid #000; padding: 10px; display: none;">
+    <div id="rdD" style="margin-top: 20px; border: 5px solid #000; padding: 10px; display: none;"></div>
         <h3>Row Data</h3>
         <p id="rdC"></p>
     </div>
