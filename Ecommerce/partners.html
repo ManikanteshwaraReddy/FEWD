@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partners | ZamaZor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #d4af37;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: linear-gradient(135deg, #000000 0%, #434343 100%);
+        }
+        .navbar-brand, .nav-link {
+            color: #d4af37 !important;
+        }
+        .navbar-brand:hover, .nav-link:hover {
+            color: #ffffff !important;
+        }
+        .nav-item .active {
+            border-bottom: 2px solid #d4af37;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #000000 0%, #434343 100%);
+            color: #d4af37;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 3rem;
+        }
+        .header p {
+            font-size: 1.5rem;
+        }
+
+        /* Partners Section */
+        .container {
+            margin-top: 40px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Partner Cards */
+        .card {
+            background-color: #1c1c1c;
+            color: #d4af37;
+            transition: transform 0.3s;
+            margin-bottom: 30px;
+            border: 1px solid #d4af37;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-img-top {
+            width: 100%;
+            height: 250px; /* Ensures uniform image size */
+            object-fit: contain; /* Prevents cropping */
+            background-color: #000;
+            padding: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #000000;
+            color: #d4af37;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .footer h5 {
+            color: #ffffff;
+        }
+        .footer a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #ffffff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            .header p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">ZamaZor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="partners.html">Partners</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Our Partners</h1>
+        <p>We collaborate with industry leaders to bring you the best.</p>
+    </div>
+
+    <!-- Partners Section -->
+    <div class="container">
+        <h2>Industry Leaders We Work With</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="rm.png" class="card-img-top" alt="Partner 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Richard Mille</h5>
+                        <p class="card-text">Exclusive partner in high-end watches.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="ap.png" class="card-img-top" alt="Partner 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Andhra Pradhesh Watch Company</h5>
+                        <p class="card-text">Pioneering smartwatches with cutting-edge technology.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="pp.png" class="card-img-top" alt="Partner 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Patel Bhai Premium Watches</h5>
+                        <p class="card-text">Supplying high-end accessories for modern lifestyles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <!-- Division 1 -->
+                <div class="col-md-4">
+                    <h5>Luxury Watches</h5>
+                    <p>Exclusive collection of premium watches.</p>
+                    <a href="#">View More</a>
+                </div>
+                <!-- Division 2 -->
+                <div class="col-md-4">
+                    <h5>Smart Tech</h5>
+                    <p>Innovative smartwatches with top-tier features.</p>
+                    <a href="#">View More</a>
+                </div>
+                <!-- Division 3 -->
+                <div class="col-md-4">
+                    <h5>Accessories</h5>
+                    <p>High-end accessories to complement your style.</p>
+                    <a href="#">View More</a>
+                </div>
+            </div>
+        </div>
+        <p class="mt-4">&copy; 2025 ZamaZor | All Rights Reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

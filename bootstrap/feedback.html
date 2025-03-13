@@ -48,7 +48,7 @@
     <div class="container">
         <div class="feedback-form-container mx-auto mt-5">
             <h2 class="text-center">Feedback Form</h2>
-            <form action="#" method="post">
+            <form id="feedbackForm" action="#" method="post">
                 <div class="mb-3">
                     <label for="name" class="form-label">Enter Name</label>
                     <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name">
@@ -70,18 +70,39 @@
                         <option value="3">3 - Good</option>
                         <option value="4">4 - Very Good</option>
                         <option value="5">5 - Excellent</option>
-                    </select>
-                    <div class="mb-3">
-                        <label for="comments" class="form-label">Additional Comments</label>
-                        <textarea id="comments" name="comments" class="form-control" rows="4" placeholder="Enter additional comments"></textarea>
+                        </select>
                     </div>
-                </div>
+               </div>
                 <div class="mb-3">
                     <label for="questions" class="form-label">Any Questions Regarding Product or Service</label>
                     <textarea id="questions" name="questions" class="form-control" rows="4" placeholder="Enter your questions here" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary w-100">Submit</button>
             </form>
+            <script>
+                document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+                    const rating = document.getElementById('rating').value;
+                    const comments = document.getElementById('comments').value;
+                    const questions = document.getElementById('questions').value;
+
+                    const feedbackData = {
+                        name: name,
+                        email: email,
+                        phone: phone,
+                        rating: rating,
+                        comments: comments,
+                        questions: questions
+                    };
+
+                    localStorage.setItem('feedbackData', JSON.stringify(feedbackData));
+                    window.location.href = 'feedback-summary.html';
+                });
+            </script>
         </div>
     </div>
 </body>
